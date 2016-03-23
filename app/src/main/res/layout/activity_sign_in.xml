@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+  >
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/editText_InEmailID"
+        android:layout_marginTop="188dp"
+        android:hint="Email ID"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/editText_InPassword"
+        android:layout_below="@+id/editText_InEmailID"
+        android:layout_alignLeft="@+id/editText_InEmailID"
+        android:layout_alignStart="@+id/editText_InEmailID"
+        android:layout_marginTop="15dp"
+        android:hint="Password" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign In"
+        android:id="@+id/button_InSignin"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="62dp"
+        android:background="#6c9293"
+        android:layout_alignLeft="@+id/editText_InPassword"
+        android:layout_alignStart="@+id/editText_InPassword"
+        android:layout_alignRight="@+id/editText_InPassword"
+        android:layout_alignEnd="@+id/editText_InPassword"
+        android:onClick="gotooutdoormap" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView_inemailID"
+        android:src="@drawable/email"
+        android:layout_alignBottom="@+id/editText_InEmailID"
+        android:layout_toLeftOf="@+id/editText_InEmailID"
+        android:layout_alignTop="@+id/editText_InEmailID"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="#08dde1" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView_inPassword"
+        android:src="@drawable/password"
+        android:layout_alignBottom="@+id/editText_InPassword"
+        android:layout_toLeftOf="@+id/editText_InEmailID"
+        android:layout_alignTop="@+id/editText_InPassword"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="#08dde1" />
+
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Move IN"
+        android:id="@+id/textView_MoveIn"
+        android:layout_above="@+id/imageView_inemailID"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="57dp"
+        android:textSize="40dp"
+        android:textColor="#08dde1" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView_inmovein"
+        android:src="@drawable/movein"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/textView_MoveIn"
+        android:layout_alignBottom="@+id/textView_MoveIn" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Forgot Password?"
+        android:id="@+id/textView_forgotPassword"
+        android:layout_below="@+id/editText_InPassword"
+        android:layout_toRightOf="@+id/imageView_inPassword"
+        android:layout_marginTop="20dp"
+        android:textSize="25dp"
+        android:layout_alignRight="@+id/editText_InPassword"
+        android:layout_alignEnd="@+id/editText_InPassword" />
+</RelativeLayout>

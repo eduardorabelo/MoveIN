@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    >
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Move IN"
+        android:id="@+id/textView"
+        android:textSize="40dp"
+        android:textColor="#08dde1"
+        android:layout_marginTop="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/editText_FullName"
+        android:layout_alignEnd="@+id/editText_FullName" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:src="@drawable/movein"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/imageView_fullname"
+        android:layout_toLeftOf="@+id/textView"
+        android:layout_toStartOf="@+id/textView" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="Your Full Name"
+        android:ems="10"
+        android:id="@+id/editText_FullName"
+        android:layout_marginTop="60dp"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView_fullname"
+        android:src="@drawable/fullname"
+        android:layout_toLeftOf="@+id/editText_FullName"
+        android:layout_alignTop="@+id/editText_FullName"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="#08dde1"
+        android:layout_alignBottom="@+id/editText_FullName" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/editText_EmailID"
+        android:hint="Your Email ID"
+        android:layout_below="@+id/editText_FullName"
+        android:layout_toRightOf="@+id/imageView_EmailID"
+        android:layout_toEndOf="@+id/imageView_EmailID"
+        android:layout_marginTop="20dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView_EmailID"
+        android:src="@drawable/email"
+        android:layout_above="@+id/editText_InPassword"
+        android:layout_toLeftOf="@+id/editText_FullName"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="#08dde1"
+        android:layout_alignTop="@+id/editText_EmailID" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/editText_InPassword"
+        android:hint="Password"
+        android:layout_below="@+id/editText_EmailID"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView_Password"
+        android:src="@drawable/password"
+        android:layout_above="@+id/editText_ConfirmPass"
+        android:layout_toLeftOf="@+id/editText_EmailID"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="#08dde1"
+        android:layout_alignTop="@+id/editText_InPassword" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/editText_ConfirmPass"
+        android:hint="Confirm Password"
+        android:layout_below="@+id/editText_InPassword"
+        android:layout_toRightOf="@+id/imageView_Password"
+        android:layout_toEndOf="@+id/imageView_Password"
+        android:layout_marginTop="20dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView_ConfirmPass"
+        android:src="@drawable/password"
+        android:layout_alignBottom="@+id/editText_ConfirmPass"
+        android:layout_toLeftOf="@+id/editText_ConfirmPass"
+        android:layout_alignTop="@+id/editText_ConfirmPass"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="#08dde1" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" I hereby Agree to abide by the Terms and Conditions."
+        android:id="@+id/checkBox_Agreement"
+        android:checked="true"
+        android:textSize="20dp"
+        android:layout_below="@+id/editText_ConfirmPass"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp" />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Sign Up"
+        android:id="@+id/button_SignUpDone"
+        android:background="#6c9293"
+        android:layout_below="@+id/checkBox_Agreement"
+        android:layout_centerHorizontal="true"
+        android:onClick="gotooutdoormap" />
+</RelativeLayout>
