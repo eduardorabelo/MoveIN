@@ -19,6 +19,7 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 public class MainActivity extends AppCompatActivity
@@ -33,6 +34,18 @@ public class MainActivity extends AppCompatActivity
 
         sMapFragment = SupportMapFragment.newInstance();
         setContentView(R.layout.activity_main);
+
+        //sMapFragment.getMapAsync(this);
+
+        android.support.v4.app.FragmentManager sFm= getSupportFragmentManager();
+        sFm.beginTransaction().show(sMapFragment).commit();
+        sFm.beginTransaction().add(R.id.map, sMapFragment).commit();
+
+        sMapFragment.getMapAsync(this);
+
+
+
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -55,13 +68,6 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
 
-        sMapFragment.getMapAsync(this);
-
-        android.support.v4.app.FragmentManager sFm= getSupportFragmentManager();
-        sFm.beginTransaction().show(sMapFragment).commit();
-        sFm.beginTransaction().add(R.id.map, sMapFragment).commit();
-
-        sMapFragment.getMapAsync(this);
 
     }
 
@@ -158,6 +164,19 @@ public class MainActivity extends AppCompatActivity
         LatLng fast_isb = new LatLng(33.655830, 73.015150);
         mMap.addMarker(new MarkerOptions().position(fast_isb).title("Marker in Fast Nuces"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(fast_isb));
+        mMap.animateCamera(CameraUpdateFactory.zoomIn());
+
+        mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
+            @Override
+            public boolean onMarkerClick(Marker marker) {
+
+
+                Intent i= new Intent(MainActivity.this,IndoorMapOptions.class);
+                startActivity(i);
+                return false;
+            }
+        });
 
     }
+
 }
