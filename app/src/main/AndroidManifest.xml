@@ -3,7 +3,6 @@
     package="com.example.shoaib.movein">
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <uses-feature
@@ -37,11 +36,9 @@
         </activity>
 
         <meta-data
-
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
         <meta-data
-
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyB8aU5ndnGsb6RDq3GkqA8RZkWlUxkgNlc" />
 
@@ -55,7 +52,9 @@
             android:name=".HelpActivity"
             android:label="@string/title_activity_help"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".IndoorMapOptions"></activity>
+        <activity android:name=".IndoorMapOptions" />
+        <activity android:name=".IndoorMap" />
+        <activity android:name=".DesignMap"></activity>
     </application>
 
 </manifest>

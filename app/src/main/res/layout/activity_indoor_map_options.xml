@@ -47,7 +47,7 @@
         android:background="#dc3453dc"
         android:textColor="#ffffff"
         android:typeface="monospace"
-        android:onClick="gotooutdoormap" />
+        android:onClick="gotoindoormap" />
 
     <Button
         android:layout_width="100dp"
@@ -61,7 +61,7 @@
         android:background="#dc3453dc"
         android:textColor="#ffffff"
         android:typeface="monospace"
-        android:onClick="gotooutdoormap" />
+        android:onClick="gotodesignmap" />
 
     <TextView
         android:layout_width="wrap_content"
