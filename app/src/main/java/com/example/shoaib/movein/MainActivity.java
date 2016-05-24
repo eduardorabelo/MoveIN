@@ -244,13 +244,13 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.signin) {
 //go to signin activity if this buttion is pressed in navigation drawer
-            Intent i= new Intent(MainActivity.this,SignInActivity.class);
+            Intent i= new Intent(MainActivity.this,GetIdentification.class);
             startActivity(i);
 
             // Handle the camera action
         } else if (id == R.id.signup) {
 
-            Intent i= new Intent(MainActivity.this,SignUpActivity.class);
+            Intent i= new Intent(MainActivity.this,PostIdentification.class);
             startActivity(i);
             //   if (!sMapFragment.isAdded())
             //sFm.beginTransaction().add(R.id.map, sMapFragment).commit();
