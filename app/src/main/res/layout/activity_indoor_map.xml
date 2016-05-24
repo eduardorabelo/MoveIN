@@ -7,6 +7,63 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.shoaib.movein.IndoorMap">
+    tools:context="com.example.shoaib.movein.IndoorMap"
+    android:background="#21f7f0">
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#2466ff"
+        android:text="Floor 3"
+        android:id="@+id/floor1"
+        android:layout_below="@+id/floor2"
+        android:layout_alignLeft="@+id/floor2"
+        android:layout_alignStart="@+id/floor2" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Floor 2"
+        android:textColor="#2466ff"
+        android:id="@+id/floor2"
+        android:layout_below="@+id/floor3"
+        android:layout_alignLeft="@+id/floor3"
+        android:layout_alignStart="@+id/floor3" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Floor 1"
+        android:textColor="#2466ff"
+
+
+        android:id="@+id/floor3"
+        android:shadowColor="#244cfb"
+        android:layout_below="@+id/available_floors"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+
+
+        android:textColor="#5724ff"
+        android:textSize="35dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Fast Nuces"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Available floors"
+        android:textSize="25dp"
+        android:textColor="#b624ff"
+
+        android:id="@+id/available_floors"
+        android:layout_marginTop="69dp"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>

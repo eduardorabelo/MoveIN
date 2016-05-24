@@ -54,7 +54,16 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".IndoorMapOptions" />
         <activity android:name=".IndoorMap" />
-        <activity android:name=".DesignMap"></activity>
+        <activity android:name=".DesignMap" />
+
+        <activity android:name=".SetView" />
+
+        <activity android:name=".SetView1" />
+        <activity android:name=".SetView2" />
+
+
     </application>
+
+
 
 </manifest>

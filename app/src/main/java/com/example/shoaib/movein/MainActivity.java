@@ -277,6 +277,8 @@ public class MainActivity extends AppCompatActivity
 
         }
 
+
+
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
@@ -291,7 +293,7 @@ public class MainActivity extends AppCompatActivity
         LatLng fast_isb = new LatLng(33.655830, 73.015150);
         mMap.addMarker(new MarkerOptions().position(fast_isb).title("Marker in Fast Nuces"));
 
-        CameraUpdate update = CameraUpdateFactory.newLatLngZoom(fast_isb,defaultzoom);
+        CameraUpdate update = CameraUpdateFactory.newLatLngZoom(fast_isb, defaultzoom);
         //   mMap.moveCamera(update);
         mMap.animateCamera(update);
 
@@ -323,7 +325,7 @@ public class MainActivity extends AppCompatActivity
 mMap.setOnMapLongClickListener(new GoogleMap.OnMapLongClickListener() {
     @Override
     public void onMapLongClick(LatLng latLng) {
-        Intent i= new Intent(MainActivity.this,IndoorMapOptions.class);
+        Intent i = new Intent(MainActivity.this, IndoorMapOptions.class);
         startActivity(i);
 
     }
@@ -384,5 +386,12 @@ mMap.setOnMapLongClickListener(new GoogleMap.OnMapLongClickListener() {
     @Override
     public void onConnectionFailed(ConnectionResult connectionResult) {
 
+    }
+
+    public void gotonavigation(View view)
+    {
+
+      //  Intent i = new Intent(MainActivity.this,Navigation.class);
+      //  startActivity(i);
     }
 }

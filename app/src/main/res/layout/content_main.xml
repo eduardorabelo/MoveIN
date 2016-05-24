@@ -28,7 +28,7 @@
             android:layout_width="83dp"
             android:layout_height="55dp"
             android:id="@+id/Location_bar"
-            android:layout_weight="0.97" />
+            android:layout_weight="0.99" />
 
         <Button
             android:layout_width="wrap_content"
@@ -40,15 +40,16 @@
         <Button
             android:layout_width="44dp"
             android:layout_height="wrap_content"
-            android:text="^"
+            android:text="+"
             android:id="@+id/button_ZoomIn"
             android:onClick="onZoom" />
         <Button
-            android:layout_width="49dp"
+            android:layout_width="44dp"
             android:layout_height="wrap_content"
-            android:text="V"
+            android:text="-"
             android:id="@+id/button_ZoomOut"
             android:onClick="onZoom" />
+
     </LinearLayout>
 
 

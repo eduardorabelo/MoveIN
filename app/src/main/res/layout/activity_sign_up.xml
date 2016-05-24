@@ -7,7 +7,7 @@
         android:layout_height="40dp"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Move IN"
-        android:id="@+id/textView"
+        android:id="@+id/t_level"
         android:textSize="40dp"
         android:textColor="#08dde1"
         android:layout_marginTop="40dp"
@@ -24,8 +24,8 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_above="@+id/imageView_fullname"
-        android:layout_toLeftOf="@+id/textView"
-        android:layout_toStartOf="@+id/textView" />
+        android:layout_toLeftOf="@+id/t_level"
+        android:layout_toStartOf="@+id/t_level" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -35,7 +35,7 @@
         android:ems="10"
         android:id="@+id/editText_FullName"
         android:layout_marginTop="60dp"
-        android:layout_below="@+id/textView"
+        android:layout_below="@+id/t_level"
         android:layout_centerHorizontal="true" />
 
     <ImageView
