@@ -8,6 +8,7 @@ import android.location.Geocoder;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -270,10 +271,15 @@ public class MainActivity extends AppCompatActivity
 
         } else if (id == R.id.share) {
 
-            Intent i= new Intent(MainActivity.this,IndoorMapOptions.class);
-            startActivity(i);
+            final Uri uriUrl = Uri.parse("http://facebook.com/");
+            Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
 
-        } else if (id == R.id.nav_send) {
+            startActivity(launchBrowser);
+
+        } else if (id == R.id.navigation) {
+
+            Intent i= new Intent(MainActivity.this,Navigation.class);
+            startActivity(i);
 
         }
 
