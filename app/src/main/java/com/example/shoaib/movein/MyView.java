@@ -87,6 +87,7 @@ public class MyView extends View {
         canvas.drawRect(720, 1500, 1020, 1630, paint2);
         canvas.drawRect(500, 1500, 700, 1630, paint2);
 
+        canvas.drawCircle(740,900,15,paint2);
         //path in the centre
         canvas.drawLine(500, 20, 500, 1480, paint3);
         canvas.drawLine(700, 20, 700, 820, paint3);

@@ -271,7 +271,7 @@ public class MainActivity extends AppCompatActivity
 
         } else if (id == R.id.share) {
 
-            final Uri uriUrl = Uri.parse("http://facebook.com/");
+            final Uri uriUrl = Uri.parse("https://www.facebook.com/MoveInApp/");
             Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
 
             startActivity(launchBrowser);
@@ -279,6 +279,12 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.navigation) {
 
             Intent i= new Intent(MainActivity.this,Navigation.class);
+            startActivity(i);
+
+        }
+        else if (id == R.id.nav_send) {
+
+            Intent i= new Intent(MainActivity.this,ContactUs.class);
             startActivity(i);
 
         }

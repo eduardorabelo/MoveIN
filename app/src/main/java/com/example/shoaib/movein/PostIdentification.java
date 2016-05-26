@@ -105,7 +105,7 @@ public class PostIdentification extends Activity {
             public void requestEndedWithError(VolleyError error) {
 
                 Toast.makeText(getApplicationContext(),
-                        error.getMessage(), Toast.LENGTH_SHORT).show();
+                        error.getMessage(), Toast.LENGTH_LONG).show();
 
             }
         };
@@ -128,7 +128,7 @@ public class PostIdentification extends Activity {
 
                 VolleyLog.d(TAG, "Error: " + error.getMessage());
                 Toast.makeText(getApplicationContext(),
-                        error.getMessage(), Toast.LENGTH_SHORT).show();
+                        error.getMessage(), Toast.LENGTH_LONG).show();
 
                 hidepDialog();
             }

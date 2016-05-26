@@ -4,12 +4,61 @@
     android:orientation="vertical" >
 
 
-    <Button
-        android:layout_width="wrap_content"
+
+
+    <TableRow
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text=" Draw square bro "
-        android:id="@+id/the_button"
-        android:layout_gravity="center_horizontal" />
+        android:layout_gravity="center_horizontal"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:id="@+id/l"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:id="@+id/w"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:id="@+id/y"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:layout_width="84dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:id="@+id/x"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:layout_width="148dp"
+            android:layout_height="wrap_content"
+            android:text=" Draw square "
+            android:id="@+id/the_button"
+            android:layout_gravity="center_horizontal" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="89dp"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:id="@+id/submit"
+            android:onClick="gotoindoormapoptions" />
+
+
+
+
+    </TableRow>
 
     <com.example.shoaib.drawing.Editor
         android:layout_width="fill_parent"

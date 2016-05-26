@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.shoaib.movein.ContactUs">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/drmalik"
+        android:src="@drawable/drmalik"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/Shoaib"
+        android:src="@drawable/shoaib"
+        android:layout_below="@+id/drmalik"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="33dp" />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/Hamza"
+        android:src="@drawable/hamza"
+        android:layout_below="@+id/Shoaib"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/Haris"
+
+        android:src="@drawable/haris"
+        android:layout_below="@+id/Hamza"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Dr Abdul Malik Khan"
+        android:id="@+id/Sirmalik"
+        android:layout_alignTop="@+id/drmalik"
+        android:layout_toRightOf="@+id/drmalik"
+        android:layout_toEndOf="@+id/drmalik"
+        android:textColor="#1a4ae6" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="abdul.malik@nu.edu.pk"
+        android:id="@+id/DrMalikEmail"
+        android:layout_below="@+id/Sirmalik"
+        android:layout_toRightOf="@+id/drmalik"
+        android:layout_toEndOf="@+id/drmalik"
+        android:textSize="18dp"
+        android:textColor="#e4004c" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Muhammad Shoaib "
+        android:id="@+id/shoaibname"
+        android:layout_alignTop="@+id/Shoaib"
+        android:layout_alignRight="@+id/Sirmalik"
+        android:layout_alignEnd="@+id/Sirmalik"
+        android:textColor="#1a4ae6" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="shoaibnomani@outlook.com"
+        android:id="@+id/shoaibemail"
+        android:layout_below="@+id/shoaibname"
+        android:layout_toRightOf="@+id/Shoaib"
+        android:textSize="18dp"
+        android:textIsSelectable="false"
+        android:textColor="#e4004c" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Hamza Khan"
+        android:id="@+id/hamzaname"
+        android:layout_below="@+id/Shoaib"
+        android:layout_toRightOf="@+id/Shoaib"
+        android:layout_toEndOf="@+id/Shoaib"
+        android:textColor="#1a4ae6" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="hamzi70khan@gmail.com"
+        android:id="@+id/hamzaemail"
+        android:layout_below="@+id/hamzaname"
+        android:layout_alignLeft="@+id/shoaibname"
+        android:layout_alignStart="@+id/shoaibname"
+        android:textSize="18dp"
+        android:textColor="#e4004c" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Hafiz Muhammad Haris"
+        android:id="@+id/harisname"
+        android:layout_alignTop="@+id/Haris"
+        android:layout_alignLeft="@+id/hamzaemail"
+        android:layout_alignStart="@+id/hamzaemail"
+        android:textColor="#1a4ae6" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="haris.fastian@gmail.com"
+        android:id="@+id/harisemail"
+        android:layout_below="@+id/harisname"
+        android:layout_toRightOf="@+id/Haris"
+        android:layout_toEndOf="@+id/Haris"
+        android:textSize="18dp"
+        android:textColor="#e4004c" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="111-128-128"
+        android:id="@+id/DrMaliknum"
+        android:layout_below="@+id/DrMalikEmail"
+        android:layout_alignLeft="@+id/shoaibname"
+        android:layout_alignStart="@+id/shoaibname"
+        android:textSize="18dp"
+        android:textColor="#19f106" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="+923452116260"
+        android:id="@+id/shoaibnum"
+        android:layout_below="@+id/shoaibemail"
+        android:layout_toRightOf="@+id/Shoaib"
+        android:layout_toEndOf="@+id/Shoaib"
+        android:textSize="18dp"
+        android:textColor="#19f106" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="+923365537280"
+        android:id="@+id/hamzanum"
+        android:layout_below="@+id/hamzaemail"
+        android:layout_alignLeft="@+id/hamzaemail"
+        android:layout_alignStart="@+id/hamzaemail"
+        android:textSize="18dp"
+        android:textColor="#19f106" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="+9233234077603"
+        android:id="@+id/harisnum"
+        android:layout_below="@+id/harisemail"
+        android:layout_alignLeft="@+id/harisname"
+        android:layout_alignStart="@+id/harisname"
+        android:textSize="18dp"
+        android:textColor="#19f106" />
+</RelativeLayout>

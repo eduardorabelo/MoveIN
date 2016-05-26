@@ -5,13 +5,11 @@ package com.example.shoaib.drawing;
  */
 
 import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
+
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
-import android.graphics.Point;
 import android.graphics.Rect;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
@@ -27,6 +25,7 @@ public class Editor extends View implements View.OnTouchListener{
     public int name_x1;
     public int name_x2;
     public String room_name="";
+
     private ArrayList<Rect> rectangles = new ArrayList<Rect>();
 
     public Editor(Context context, AttributeSet aSet) {

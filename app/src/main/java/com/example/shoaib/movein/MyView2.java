@@ -107,6 +107,7 @@ public class MyView2 extends View {
         canvas.drawText("Girl's Common", 200, 1270, paint4);
         canvas.drawText("Room", 200, 1330, paint4);
         canvas.drawText("Control room", 200, 1450, paint4);
+        canvas.drawCircle(740,900,15,paint2);
 
         //for Naming the rooms on left side
         canvas.drawText("Room # 01", 750, 130, paint4);

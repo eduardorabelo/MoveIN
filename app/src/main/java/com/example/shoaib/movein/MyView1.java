@@ -140,6 +140,7 @@ public class MyView1 extends View {
         canvas.drawText("Room # 211", 750, 1590, paint4);
         canvas.drawText("Faculty", 510, 1590, paint4);
         canvas.drawText("room", 510, 1620, paint4);
+        canvas.drawCircle(740,900,15,paint2);
 
         //for naming 3rd floor on path
         canvas.drawText(" 2nd ", 550, 50,  paint4);
