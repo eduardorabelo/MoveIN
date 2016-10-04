@@ -37,6 +37,7 @@ public class Navigation extends Activity  {
 
     WifiScanReceiver wifiReciever;
 
+    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
