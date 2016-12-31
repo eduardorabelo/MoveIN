@@ -15,6 +15,8 @@ public class IndoorMap extends AppCompatActivity {
         Button f1= (Button) findViewById(R.id.floor1);
         Button f2 = (Button) findViewById(R.id.floor2);
         Button f3 = (Button) findViewById(R.id.floor3);
+        Button f4 = (Button) findViewById(R.id.demomap);
+
 
         f1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,6 +48,15 @@ public class IndoorMap extends AppCompatActivity {
             }
         });
 
+
+        f4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(IndoorMap.this, SetViewDemo.class);
+                i.putExtra("demomap",3);
+                startActivity(i);
+            }
+        });
 
 
     }

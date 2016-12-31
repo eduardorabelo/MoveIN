@@ -2,10 +2,14 @@ package com.example.shoaib.movein;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
+import android.graphics.Matrix;
 import android.graphics.Paint;
 import android.graphics.Path;
+import android.graphics.PathMeasure;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
@@ -17,6 +21,34 @@ import static android.support.v4.app.ActivityCompat.startActivity;
 
 
 public class MyView1 extends View  {
+
+
+
+
+    //===============================================
+    Paint paint;
+
+    Bitmap bm;
+    int bm_offsetX, bm_offsetY;
+
+    Path animPath;
+    PathMeasure pathMeasure;
+    float pathLength;
+
+    float step;   //distance each step
+    float distance;  //distance moved
+
+    float[] pos;
+    float[] tan;
+
+
+    Matrix matrix;
+    //===============================================
+
+
+
+
+
 
     int counter=0;
     Paint paint1,paint2,paint3,paint4,paint5,paint6,paint7;
@@ -81,9 +113,41 @@ public class MyView1 extends View  {
     public MyView1(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         init();
+
     }
 
     private void init(){
+
+//===================================================
+        paint = new Paint();
+        paint.setColor(Color.BLUE);
+        paint.setStrokeWidth(1);
+        paint.setStyle(Paint.Style.STROKE);
+
+        bm = BitmapFactory.decodeResource(getResources(), R.mipmap.man);
+        bm_offsetX = bm.getWidth()/2;
+        bm_offsetY = bm.getHeight()/2;
+
+
+        animPath = new Path();
+
+
+        step = 4;
+        distance = 0;
+        pos = new float[2];
+        tan = new float[2];
+
+        matrix = new Matrix();
+
+
+
+        //===================================================
+
+
+
+
+
+
         paint1 = new Paint();
         paint1.setColor(Color.CYAN);
         paint1.setStrokeWidth(10);
@@ -130,6 +194,31 @@ public class MyView1 extends View  {
         //rooms on left side
         //drawRect(left, top, right, bottom, paint)
         canvas.drawPath(path, paint7);
+
+
+        //=======================================================
+
+        if(distance < pathLength){
+            pathMeasure.getPosTan(distance, pos, tan);
+
+            matrix.reset();
+            float degrees = (float)(Math.atan2(tan[1], tan[0])*180.0/Math.PI);
+            matrix.postRotate(degrees, bm_offsetX, bm_offsetY);
+            matrix.postTranslate(pos[0]-bm_offsetX, pos[1]-bm_offsetY);
+
+            canvas.drawBitmap(bm, matrix, null);
+
+            distance += step;
+        }else{
+            distance = 0;
+        }
+
+        invalidate();
+
+
+
+
+//========================================================
 
         canvas.drawRect(150, 10, 1050, 1650, paint1);
         canvas.drawRect(180, 40, 480, 330, paint2);
@@ -1340,13 +1429,28 @@ public class MyView1 extends View  {
                         path.lineTo(node202X, node202Y);
                         path.lineTo(nodeKhy1X, nodeKhy1Y);
                     }
+
+//+++++++++=============================================
+
                     else if(((sourcex >=720 && sourcex<=1020)&&(sourcey >=180 && sourcey<=290))&&((destx>=180 && destx<=480)&&(desty>=820&&desty<=970)))
                     {
                         path.moveTo(nodeMensRoomX, node2MensRoomY);
                         path.lineTo(node202X, node202Y);
                         path.lineTo(nodeKhy1X, nodeKhy1Y);
                         path.lineTo(nodeNasconX, nodeNasconY);
+                        path.addCircle(nodeNasconX,nodeNasconY,10,Path.Direction.CCW);
+
+                        pathMeasure = new PathMeasure(path, false);
+                        pathLength = pathMeasure.getLength();
+
+                        Toast.makeText(getContext(), "pathLength: " + pathLength, Toast.LENGTH_LONG).show();
+
                     }
+
+
+
+//=====================================================
+
                     else if(((sourcex >=720 && sourcex<=1020)&&(sourcey >=180 && sourcey<=290))&&((destx>=180 && destx<=480)&&(desty>=990&&desty<=1100)))
                     {
                         path.moveTo(nodeMensRoomX, node2MensRoomY);
@@ -1354,13 +1458,26 @@ public class MyView1 extends View  {
                         path.lineTo(nodeKhy1X, nodeKhy1Y);
                         path.lineTo(nodeFaculty1X, nodeFaculty1Y);
                         path.addCircle(nodeFaculty1X,nodeFaculty1Y,10,Path.Direction.CCW);
+
+                        pathMeasure = new PathMeasure(path, false);
+                        pathLength = pathMeasure.getLength();
+
+                        Toast.makeText(getContext(), "pathLength: " + pathLength, Toast.LENGTH_LONG).show();
                     }
+//=====================================================
+
+
+
+
+
+
                     else if(((sourcex >=720 && sourcex<=1020)&&(sourcey >=180 && sourcey<=290))&&((destx>=180 && destx<=480)&&(desty>=1120&&desty<=1230)))
                     {
                         path.moveTo(nodeMensRoomX, node2MensRoomY);
                         path.lineTo(node202X, node202Y);
                         path.lineTo(nodeKhy1X, nodeKhy1Y);
                         path.lineTo(nodeFaculty2X, nodeFaculty2Y);
+
                     }
                     else if(((sourcex >=720 && sourcex<=1020)&&(sourcey >=180 && sourcey<=290))&&((destx>=180 && destx<=480)&&(desty>=1250&&desty<=1360)))
                     {
@@ -1570,12 +1687,27 @@ public class MyView1 extends View  {
                         path.lineTo(nodeKhy1X, nodeKhy1Y);
                         path.lineTo(nodeFaculty3X, nodeFaculty3Y);
                     }
+//+++++++++=============================================
+
+
                     else if(((sourcex >=720 && sourcex<=1020)&&(sourcey >=480 && sourcey<=630))&&((destx>=180 && destx<=480)&&(desty>=1380&&desty<=1630)))
                     {
                         path.moveTo(node202X, node202Y);
                         path.lineTo(nodeKhy1X, nodeKhy1Y);
                         path.lineTo(nodeRawalX, nodeRawalY);
+                        path.addCircle(nodeRawalX,nodeRawalY,10,Path.Direction.CCW);
+
+
+                        pathMeasure = new PathMeasure(path, false);
+                        pathLength = pathMeasure.getLength();
+
+                        Toast.makeText(getContext(), "pathLength: " + pathLength, Toast.LENGTH_LONG).show();
+
                     }
+
+//+++++++++=============================================
+
+
                     else if(((sourcex >=720 && sourcex<=1020)&&(sourcey >=480 && sourcey<=630))&&((destx>=500 && destx<=700)&&(desty>=1500&&desty<=1630)))
                     {
                         path.moveTo(node202X, node202Y);

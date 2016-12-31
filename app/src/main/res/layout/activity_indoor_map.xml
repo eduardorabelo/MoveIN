@@ -32,17 +32,6 @@
         android:layout_marginTop="35dp"
         android:background="#6c9293" />
 
-    <Button
-        android:layout_width="150dp"
-        android:layout_height="50dp"       android:text="Floor 1"
-        android:textColor="#ffffff"
-
-
-        android:id="@+id/floor3"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:background="#6c9293" />
-
     <TextView
 
 
@@ -73,9 +62,36 @@
         android:layout_height="50dp"
         android:text="GroundFloor"
         android:id="@+id/button_ground"
-        android:layout_above="@+id/floor3"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="32dp"
         android:background="#6c9293"
-        android:textColor="#ffffff" />
+        android:textColor="#ffffff"
+        android:layout_below="@+id/available_floors"
+        android:layout_alignLeft="@+id/floor3"
+        android:layout_alignStart="@+id/floor3"
+        android:layout_marginTop="21dp" />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="50dp"       android:text="Floor 1"
+        android:textColor="#ffffff"
+
+
+        android:id="@+id/floor3"
+        android:background="#6c9293"
+        android:layout_below="@+id/button_ground"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="34dp" />
+
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="50dp"       android:text="Demo Map"
+        android:textColor="#ffffff"
+
+
+        android:id="@+id/demomap"
+        android:background="#6c9293"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/floor1"
+        android:layout_alignStart="@+id/floor1" />
+
 </RelativeLayout>

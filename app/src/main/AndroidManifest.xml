@@ -74,6 +74,8 @@
         <activity android:name=".ContactUs" />
         <activity android:name=".ImageFileFloor2" />
         <activity android:name=".ImageFileFloor3" />
+        <activity android:name=".SetViewDemo" />
+
     </application>
 
 </manifest>
