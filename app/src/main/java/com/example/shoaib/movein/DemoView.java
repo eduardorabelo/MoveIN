@@ -1,4 +1,5 @@
 package com.example.shoaib.movein;
+
 //DEMO MAP
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -44,18 +45,41 @@ public class DemoView extends View {
 
 
     int nodeAx=390;
-    int nodeBx=720;
-    int nodeCx=800;
-    int nodeDx=390;
-    int nodeEx=720;
-    int nodeFx=800;
-    int nodeGx=500;
-    int nodeGTMidX=390;
-    int nodeHx=600;
-    int nodeHRx=800;
-    int nodeIx=1020;
-    int nodeJx=480;
-    int nodeKx=1020;
+    int nodeBTLx=470;
+    int nodeBTRx=720;
+    int nodeBBLx=470;
+    int nodeBBRx=720;
+    int nodeCTLx=800;
+    int nodeCBLx=800;
+    int nodeDtrx=390;
+    int nodeDbrx=390;
+    int nodeEtrx=720;
+    int nodeEtlx=470;
+    int nodeEbrx=720;
+    int nodeEblx=470;
+    int nodeFTlx=800;
+    int nodeFblx=800;
+    int nodeGTrx=470;
+    int nodeGTMidtX=390;
+    int nodeGTlx=270;
+    int nodeGblx=270;
+    int nodeGBMidx=390;
+    int nodeGBrx=510;
+    int nodeHTlx=600;
+    int nodeHTRx=800;
+    int nodeHMidtx=720;
+    int nodeHBlx=600;
+    int nodeHBrx=800;
+    int nodeHMidBx=720;
+    int nodeITrx=1020;
+    int nodeITlx=810;
+    int nodeIBrx=1020;
+    int nodeIBlx=810;
+    int nodeJtrx=480;
+    int nodeJTlx=170;
+    int nodeJMidtx=270;
+    int nodeKTrx=1020;
+    int nodeKTlx=810;
     int nodeBStairTopX=600;
     int nodeBStairTopY=1270;
     int nodeBStairMidX=670;
@@ -69,19 +93,53 @@ public class DemoView extends View {
     int nodeAStairEX=1050;
     int nodeAStairEY=410;
 
+
+
     int nodeAy=30;
     int nodeBy=30;
+    int nodeBTLy=30;
+    int nodeBTRy=30;
+    int nodeBBLy=320;
+    int nodeBBRy=320;
+    int nodeCTLy=30;
+    int nodeCBLy=320;
+    int nodeDtry=320;
+    int nodeDbry=820;
+    int nodeEtry=500;
+    int nodeEtly=500;
+    int nodeEbry=820;
+    int nodeEbly=820;
+    int nodeFTly=500;
+    int nodeFbly=820;
+    int nodeGTry=930;
+    int nodeGTMidty=930;
+    int nodeGTly=930;
+    int nodeGbly=1170;
+    int nodeGBMidy=1170;
+    int nodeGBry=1170;
+    int nodeHTly=930;
+    int nodeHTRy=930;
+    int nodeHMidty=930;
+    int nodeHBly=1170;
+    int nodeHBry=1170;
+    int nodeHMidBy=1170;
+    int nodeITry=930;
+    int nodeITly=930;
+    int nodeIBry=1170;
+    int nodeIBly=1170;
+    int nodeJtry=1280;
+    int nodeJTly=1280;
+    int nodeJMidty=1280;
+    int nodeKTry=1280;
+    int nodeKTly=1280;
     int nodeCy=30;
-    int nodeDy=320;
-    int nodeEy=550;
-    int nodeFy=550;
-    int nodeGy=925;
-    int nodeGTMidY=925;
+    int nodeDy=300;
+    int nodeGTMidY=930;
     int nodeHy=925;
     int nodeHRy=925;
     int nodeIy=925;
     int nodeJy=1270;
-    int nodeKy=1270;
+    int nodeKy=1280;
 
 
     private Path path1 = new Path();
@@ -323,58 +381,7 @@ public class DemoView extends View {
                     desty = event.getY();
                     Toast toast6 = Toast.makeText(getContext(),"dest"+" "+destx+" "+desty,Toast.LENGTH_SHORT);
                     toast6.show();
-                    //A-K
-                    if(((sourcex >=170 && sourcex<=360)&&(sourcey >=30 && sourcey<=300))&&((destx>=830 && destx<=1020)&&(desty>=1300&&desty<=1500))) {
-                        path1.moveTo(nodeAx, nodeAy);
-                        path1.lineTo(nodeDx, nodeDy);
-                        path1.lineTo(nodeGTMidX, nodeGTMidY);
-                        path1.lineTo(nodeHx,nodeHy);
-                        path1.lineTo(nodeBStairTopX,nodeBStairTopY);
-                        path1.lineTo(nodeKx,nodeKy);
-                        path1.addCircle(nodeKx, nodeKy, 10, Path.Direction.CCW);
-
-                        pathMeasure = new PathMeasure(path1, false);
-                        pathLength = pathMeasure.getLength();
-
-                        Toast.makeText(getContext(), "pathLength: " + pathLength, Toast.LENGTH_LONG).show();
-
-                    }
-                    //C-K
-                    else if(((sourcex >=830 && sourcex<=1020)&&(sourcey >=30 && sourcey<=300))&&((destx>=830 && destx<=1020)&&(desty>=1300&&desty<=1500)))
-                    {
-                        path1.moveTo(nodeCx, nodeCy);
-                        path1.lineTo(nodeFx, nodeFy);
-                        path1.lineTo(nodeHRx, nodeHRy);
-                        path1.lineTo(nodeHx,nodeHy);
-                        path1.lineTo(nodeBStairTopX,nodeBStairTopY);
-                        path1.lineTo(nodeKx,nodeKy);
-                        path1.addCircle(nodeKx, nodeKy, 10, Path.Direction.CCW);
-
-                        pathMeasure = new PathMeasure(path1, false);
-                        pathLength = pathMeasure.getLength();
-
-                        Toast.makeText(getContext(), "pathLength: " + pathLength, Toast.LENGTH_LONG).show();
-
-                    }
-                    //J-C
-                    else if(((sourcex >=170 && sourcex<=450)&&(sourcey >=1300 && sourcey<=1500))&&((destx>=830 && destx<=1020)&&(desty>=30&&desty<=300)))
-                    {
-                        path1.moveTo(nodeJx, nodeJy);
-                        path1.lineTo(nodeBStairTopX, nodeBStairTopY);
-                        path1.lineTo(nodeHx, nodeHy);
-                        path1.lineTo(nodeHRx, nodeHRy);
-                        path1.lineTo(nodeFx, nodeFy);
-                        path1.lineTo(nodeCx, nodeCy);
-                        path1.addCircle(nodeCx, nodeCy, 10, Path.Direction.CCW);
-                        pathMeasure = new PathMeasure(path1, false);
-                        pathLength = pathMeasure.getLength();
-
-                        Toast.makeText(getContext(), "pathLength: " + pathLength, Toast.LENGTH_LONG).show();
-
-
-                    }
-
-
+                    /*
 
                     //A-topStairs
                     if(((sourcex >=170 && sourcex<=360)&&(sourcey >=30 && sourcey<=300))&&((destx>=20 && destx<=80)&&(desty>=420&&desty<=520)))
@@ -511,7 +518,1140 @@ public class DemoView extends View {
 
                         Toast.makeText(getContext(), "pathLength: " + pathLength, Toast.LENGTH_LONG).show();
 
+                    }*/
+                    //A-B
+                    if(((sourcex >=170 && sourcex<=360)&&(sourcey >=30 && sourcey<=300))&&((destx>=500 && destx<=690)&&(desty>=30&&desty<=300))) {
+                        path1.moveTo(nodeAx,nodeAy);
+                        path1.lineTo(nodeBTLx,nodeBTLy);
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
                     }
+
+                    //A-C
+                    if(((sourcex >=170 && sourcex<=360)&&(sourcey >=30 && sourcey<=300))&&((destx>=830 && destx<=1020)&&(desty>=30&&desty<=300))) {
+                        path1.moveTo(nodeAx,nodeAy);
+                        path1.lineTo(nodeDtrx,nodeDtry);
+                        path1.lineTo(nodeCBLx, nodeCBLy);
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+                    }
+
+                    //A-D
+                    if(((sourcex >=170 && sourcex<=360)&&(sourcey >=30 && sourcey<=300))&&((destx>=170 && destx<=360)&&(desty>=320&&desty<=800))) {
+                        path1.moveTo(nodeAx,nodeAy);
+                        path1.lineTo(nodeDtrx,nodeDtry);
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+                    }
+
+                    //A-E
+                    if(((sourcex >=170 && sourcex<=360)&&(sourcey >=30 && sourcey<=300))&&((destx>=500 && destx<=690)&&(desty>=520&&desty<=800))) {
+                        path1.moveTo(nodeAx,nodeAy);
+                        path1.lineTo(nodeDbrx,nodeDbry);
+                        path1.lineTo(nodeEblx, nodeEbly);
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+                    }
+
+                    //A-F
+                    if(((sourcex >=170 && sourcex<=360)&&(sourcey >=30 && sourcey<=300))&&((destx>=830 && destx<=1020)&&(desty>=520&&desty<=800))) {
+                        path1.moveTo(nodeAx,nodeAy);
+                        path1.lineTo(nodeDbrx,nodeDbry);
+                        path1.lineTo(nodeFblx, nodeFbly);
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+                    }
+                    //A-G
+                    if(((sourcex >=170 && sourcex<=360)&&(sourcey >=30 && sourcey<=300))&&((destx>=300 && destx<=480)&&(desty>=950&&desty<=1150))) {
+                        path1.moveTo(nodeAx,nodeAy);
+                        path1.lineTo(nodeDbrx,nodeDbry);
+                        path1.lineTo(nodeGTMidtX, nodeGTMidY);
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+                    }
+
+                    //A-H
+                    if(((sourcex >=170 && sourcex<=360)&&(sourcey >=30 && sourcey<=300))&&((destx>=630 && destx<=810)&&(desty>=950&&desty<=1150))) {
+                        path1.moveTo(nodeAx,nodeAy);
+                        path1.lineTo(nodeDbrx,nodeDbry);
+                        path1.lineTo(nodeGTMidtX, nodeGTMidY);
+                        path1.lineTo(nodeHTlx,nodeHTly);
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+                    }
+
+                    //A-I
+                    if(((sourcex >=170 && sourcex<=360)&&(sourcey >=30 && sourcey<=300))&&((destx>=830 && destx<=1020)&&(desty>=950&&desty<=1150))) {
+                        path1.moveTo(nodeAx,nodeAy);
+                        path1.lineTo(nodeDbrx,nodeDbry);
+                        path1.lineTo(nodeGTMidtX, nodeGTMidY);
+                        path1.lineTo(nodeHTlx,nodeHTly);
+                        path1.lineTo(nodeITrx,nodeITry);
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+                    }
+                    //A-J
+                    if(((sourcex >=170 && sourcex<=360)&&(sourcey >=30 && sourcey<=300))&&((destx>=170 && destx<=450)&&(desty>=1300&&desty<=1500))) {
+                        path1.moveTo(nodeAx,nodeAy);
+                        path1.lineTo(nodeDbrx,nodeDbry);
+                        path1.lineTo(nodeGTMidtX, nodeGTMidY);
+                        path1.lineTo(nodeGTlx,nodeGTly);
+                        path1.lineTo(nodeJMidtx,nodeJMidty);
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+                    }
+                    //A-K
+                    if(((sourcex >=170 && sourcex<=360)&&(sourcey >=30 && sourcey<=300))&&((destx>=830 && destx<=1020)&&(desty>=1300&&desty<=1500))) {
+                        path1.moveTo(nodeAx, nodeAy);
+                        path1.lineTo(nodeDbrx, nodeDy);
+                        path1.lineTo(nodeGTMidtX, nodeGTMidY);
+                        path1.lineTo(nodeHTlx,nodeHy);
+                        path1.lineTo(nodeBStairTopX, nodeBStairTopY);
+                        path1.lineTo(nodeKTlx,nodeKy);
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+                    }
+                    //B-A
+                    if(((sourcex >=500 && sourcex<=690)&&(sourcey >=30 && sourcey<=300))&&((destx>=170 && destx<=360)&&(desty>=30&&desty<=300))) {
+                        path1.moveTo(nodeBTLx, nodeBTLy);
+                        path1.lineTo(nodeAx,nodeAy);
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+                    }
+
+                    //B-C
+                    if(((sourcex >=500 && sourcex<=690)&&(sourcey >=30 && sourcey<=300))&&((destx>=830 && destx<=1020)&&(desty>=30&&desty<=300))) {
+                        path1.moveTo(nodeBTRx, nodeBTLy);
+                        path1.lineTo(nodeCTLx,nodeCTLy);
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+                    }
+                    //B-D
+                    if(((sourcex >=500 && sourcex<=690)&&(sourcey >=30 && sourcey<=300))&&((destx>=170 && destx<=360)&&(desty>=320&&desty<=800))) {
+                        path1.moveTo(nodeBTLx, nodeBTLy);
+                        path1.lineTo(nodeAx,nodeAy);
+                        path1.lineTo(nodeDtrx, nodeDtry);
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+                    }
+                    //B-E
+                    if(((sourcex >=500 && sourcex<=690)&&(sourcey >=30 && sourcey<=300))&&((destx>=500 && destx<=690)&&(desty>=520&&desty<=800))) {
+                        path1.moveTo(nodeBTRx, nodeBTRy);
+                        path1.lineTo(nodeEtrx,nodeEtry);
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+                    }
+                    //B-F
+                    if(((sourcex >=500 && sourcex<=690)&&(sourcey >=30 && sourcey<=300))&&((destx>=830 && destx<=1020)&&(desty>=520&&desty<=800))) {
+                        path1.moveTo(nodeBTRx, nodeBTRy);
+                        path1.lineTo(nodeCTLx,nodeCTLy);
+                        path1.lineTo(nodeFTlx,nodeFTly);
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+                    }
+                    //B-G
+                    if(((sourcex >=500 && sourcex<=690)&&(sourcey >=30 && sourcey<=300))&&((destx>=300 && destx<=480)&&(desty>=950&&desty<=1150))) {
+                        path1.moveTo(nodeBTLx, nodeBTLy);
+                        path1.lineTo(nodeGTrx,nodeGTry);
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+                    }
+                    //B-H
+                    if(((sourcex >=500 && sourcex<=690)&&(sourcey >=30 && sourcey<=300))&&((destx>=630 && destx<=810)&&(desty>=950&&desty<=1150))) {
+                        path1.moveTo(nodeBTRx, nodeBTRy);
+                        path1.lineTo(nodeHMidtx,nodeHMidty);
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+                    }
+                    //B-I
+                    if(((sourcex >=500 && sourcex<=690)&&(sourcey >=30 && sourcey<=300))&&((destx>=830 && destx<=1020)&&(desty>=950&&desty<=1150))) {
+                        path1.moveTo(nodeBTRx, nodeBTRy);
+                        path1.lineTo(nodeHMidtx,nodeHMidty);
+                        path1.lineTo(nodeITrx, nodeITry);
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+                    }
+                    //B-J
+                    if(((sourcex >=500 && sourcex<=690)&&(sourcey >=30 && sourcey<=300))&&((destx>=170 && destx<=450)&&(desty>=1300&&desty<=1500))) {
+                        path1.moveTo(nodeBTLx, nodeBTLy);
+                        path1.lineTo(nodeGTrx, nodeGTry);
+                        path1.lineTo(nodeGTlx,nodeGTly);
+                        path1.lineTo(nodeJMidtx,nodeJMidty);
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+                    }
+                    //B-K
+                    if(((sourcex >=500 && sourcex<=690)&&(sourcey >=30 && sourcey<=300))&&((destx>=830 && destx<=1020)&&(desty>=1300&&desty<=1500))) {
+                        path1.moveTo(nodeBTRx, nodeBTRy);
+                        path1.lineTo(nodeHMidtx, nodeHMidty);
+                        path1.lineTo(nodeHTlx, nodeHTly);
+                        path1.lineTo(nodeHBlx,nodeHBly);
+                        path1.lineTo(nodeIBrx,nodeIBry);
+                        path1.lineTo(nodeKTrx,nodeKTry);
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+                    }
+
+                    //C-A
+                    if(((sourcex >=830 && sourcex<=1020)&&(sourcey >=30 && sourcey<=300))&&((destx>=170 && destx<=360)&&(desty>=30&&desty<=300))) {
+                        path1.moveTo(nodeCTLx,nodeCTLy);
+                        path1.lineTo(nodeAStairTopX,nodeAStairTopY);
+                        path1.lineTo(nodeDtrx, nodeDtry);
+                        path1.lineTo(nodeAx, nodeAy);
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+                    }
+                    //C-b
+                    if(((sourcex >=830 && sourcex<=1020)&&(sourcey >=30 && sourcey<=300))&&((destx>=500 && destx<=690)&&(desty>=30&&desty<=300))) {
+                        path1.moveTo(nodeCTLx,nodeCTLy);
+                        path1.lineTo(nodeBTRx,nodeBTRy);
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+                    }
+                    //C-d
+                    if(((sourcex >=830 && sourcex<=1020)&&(sourcey >=30 && sourcey<=300))&&((destx>=170 && destx<=360)&&(desty>=320&&desty<=800))) {
+                        path1.moveTo(nodeCTLx, nodeCTLy);
+                        path1.lineTo(nodeAStairTopX,nodeAStairTopY);
+                        path1.lineTo(nodeDtrx, nodeDtry);
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+                    }
+                    //C-e
+                    if(((sourcex >=830 && sourcex<=1020)&&(sourcey >=30 && sourcey<=300))&&((destx>=500 && destx<=690)&&(desty>=520&&desty<=800))) {
+                        path1.moveTo(nodeCTLx,nodeCTLy);
+                        path1.lineTo(nodeFTlx,nodeFTly);
+                        path1.lineTo(nodeEtrx, nodeEtry);
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+                    }
+                    //C-f
+                    if(((sourcex >=830 && sourcex<=1020)&&(sourcey >=30 && sourcey<=300))&&((destx>=830 && destx<=1020)&&(desty>=520&&desty<=800))) {
+                        path1.moveTo(nodeCTLx, nodeCTLy);
+                        path1.lineTo(nodeFTlx,nodeFTly);
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+                    }
+                    //C-g
+                    if(((sourcex >=830 && sourcex<=1020)&&(sourcey >=30 && sourcey<=300))&&((destx>=300 && destx<=480)&&(desty>=950&&desty<=1150))) {
+                        path1.moveTo(nodeCTLx,nodeCTLy);
+                        path1.lineTo(nodeHTRx,nodeHTRy);
+                        path1.lineTo(nodeGTrx, nodeGTry);
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+                    }
+                    //C-h
+                    if(((sourcex >=830 && sourcex<=1020)&&(sourcey >=30 && sourcey<=300))&&((destx>=630 && destx<=810)&&(desty>=950&&desty<=1150))) {
+                        path1.moveTo(nodeCTLx, nodeCTLy);
+                        path1.lineTo(nodeHTRx,nodeHTRy);
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+                    }
+                    //C-i
+                    if(((sourcex >=830 && sourcex<=1020)&&(sourcey >=30 && sourcey<=300))&&((destx>=830 && destx<=1020)&&(desty>=950&&desty<=1150))) {
+                        path1.moveTo(nodeCTLx,nodeCTLy);
+                        path1.lineTo(nodeHTRx,nodeHTRy);
+                        path1.lineTo(nodeITrx, nodeITry);
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+                    }
+                    //C-j
+                    if(((sourcex >=830 && sourcex<=1020)&&(sourcey >=30 && sourcey<=300))&&((destx>=170 && destx<=450)&&(desty>=1300&&desty<=1500))) {
+                        path1.moveTo(nodeCTLx,nodeCTLy);
+                        path1.lineTo(nodeHTRx,nodeHTRy);
+                        path1.lineTo(nodeGTlx, nodeGTly);
+                        path1.lineTo(nodeJMidtx,nodeJMidty);
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+                    }
+                    //C-k
+                    if(((sourcex >=830 && sourcex<=1020)&&(sourcey >=30 && sourcey<=300))&&((destx>=830 && destx<=1020)&&(desty>=1300&&desty<=1500))) {
+                        path1.moveTo(nodeCTLx, nodeCTLy);
+                        path1.lineTo(nodeHTRx, nodeHTRy);
+                        path1.lineTo(nodeHTlx, nodeHTly);
+                        path1.lineTo(nodeHBlx,nodeHBly);
+                        path1.lineTo(nodeIBrx,nodeIBry);
+                        path1.lineTo(nodeKTrx,nodeKTry);
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+                    }
+                    //D-A
+                    if(((sourcex >=170 && sourcex<=360)&&(sourcey >=320 && sourcey<=800))&&((destx>=170 && destx<=360)&&(desty>=30&&desty<=300))) {
+                        path1.moveTo(nodeDtrx, nodeDtry);
+                        path1.lineTo(nodeAx,nodeAy);
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+                    }
+                    //D-b
+                    if(((sourcex >=170 && sourcex<=360)&&(sourcey >=320 && sourcey<=800))&&((destx>=500 && destx<=690)&&(desty>=30&&desty<=300))) {
+                        path1.moveTo(nodeDtrx, nodeDtry);
+                        path1.lineTo(nodeAx,nodeAy);
+                        path1.lineTo(nodeBTLx, nodeBTLy);
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+                    }
+                    //D-c
+                    if(((sourcex >=170 && sourcex<=360)&&(sourcey >=320 && sourcey<=800))&&((destx>=830 && destx<=1020)&&(desty>=30&&desty<=300))) {
+                        path1.moveTo(nodeDtrx, nodeDtry);
+                        path1.lineTo(nodeAStairTopX,nodeAStairTopY);
+                        path1.lineTo(nodeCTLx, nodeCTLy);
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+                    }
+                    //D-e
+                    if(((sourcex >=170 && sourcex<=360)&&(sourcey >=320 && sourcey<=800))&&((destx>=500 && destx<=690)&&(desty>=520&&desty<=800))) {
+                        path1.moveTo(nodeDtrx, nodeDtry);
+                        path1.lineTo(nodeBBLx,nodeBBLy);
+                        path1.lineTo(nodeEtlx, nodeEtly);
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+                    }
+                    //D-f
+                    if(((sourcex >=170 && sourcex<=360)&&(sourcey >=320 && sourcey<=800))&&((destx>=830 && destx<=1020)&&(desty>=520&&desty<=800))) {
+                        path1.moveTo(nodeDtrx, nodeDtry);
+                        path1.lineTo(nodeCBLx,nodeCBLy);
+                        path1.lineTo(nodeFTlx, nodeFTly);
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+                    }
+                    //D-g
+                    if(((sourcex >=170 && sourcex<=360)&&(sourcey >=320 && sourcey<=800))&&((destx>=300 && destx<=480)&&(desty>=950&&desty<=1150))) {
+                        path1.moveTo(nodeDtrx, nodeDtry);
+                        path1.lineTo(nodeGTMidtX,nodeGTMidY);
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+                    }
+                    //D-h
+                    if(((sourcex >=170 && sourcex<=360)&&(sourcey >=320 && sourcey<=800))&&((destx>=630 && destx<=810)&&(desty>=950&&desty<=1150))) {
+                        path1.moveTo(nodeDtrx, nodeDtry);
+                        path1.lineTo(nodeGTMidtX,nodeGTMidY);
+                        path1.lineTo(nodeHMidtx, nodeHMidty);
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+                    }
+                    //D-i
+                    if(((sourcex >=170 && sourcex<=360)&&(sourcey >=320 && sourcey<=800))&&((destx>=830 && destx<=1020)&&(desty>=950&&desty<=1150))) {
+                        path1.moveTo(nodeDtrx, nodeDtry);
+                        path1.lineTo(nodeGTMidtX,nodeGTMidY);
+                        path1.lineTo(nodeITrx,nodeITry);
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+                    }
+                    //D-j
+                    if(((sourcex >=170 && sourcex<=360)&&(sourcey >=320 && sourcey<=800))&&((destx>=170 && destx<=450)&&(desty>=1300&&desty<=1500))) {
+                        path1.moveTo(nodeDtrx, nodeDtry);
+                        path1.lineTo(nodeGTMidtX,nodeGTMidY);
+                        path1.lineTo(nodeGTlx, nodeGTly);
+                        path1.lineTo(nodeJMidtx,nodeJMidty);
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+                    }
+                    //D-k
+                    if(((sourcex >=170 && sourcex<=360)&&(sourcey >=320 && sourcey<=800))&&((destx>=830 && destx<=1020)&&(desty>=1300&&desty<=1500))) {
+                        path1.moveTo(nodeDtrx, nodeDtry);
+                        path1.lineTo(nodeGTMidtX,nodeGTMidY);
+                        path1.lineTo(nodeHTlx, nodeHTly);
+                        path1.lineTo(nodeHBlx, nodeHBly);
+                        path1.lineTo(nodeIBrx, nodeIBry);
+                        path1.lineTo(nodeKTrx, nodeKTry);
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+                    }
+                    //E-A
+                    if(((sourcex >=500 && sourcex<=690)&&(sourcey >=520 && sourcey<=800))&&((destx>=170 && destx<=360)&&(desty>=30&&desty<=300))) {
+                        path1.moveTo(nodeEtlx, nodeEtly);
+                        path1.lineTo(nodeBTLx,nodeBTLy);
+                        path1.lineTo(nodeAx, nodeAy);
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+                    }
+                    //E-b
+                    if(((sourcex >=500 && sourcex<=690)&&(sourcey >=520 && sourcey<=800))&&((destx>=500 && destx<=690)&&(desty>=30&&desty<=300))) {
+                        path1.moveTo(nodeEtlx, nodeEtly);
+                        path1.lineTo(nodeBTLx,nodeBTLy);
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+                    }
+                    //E-C
+                    if(((sourcex >=500 && sourcex<=690)&&(sourcey >=520 && sourcey<=800))&&((destx>=830 && destx<=1020)&&(desty>=30&&desty<=300))) {
+                        path1.moveTo(nodeEtrx, nodeEtry);
+                        path1.lineTo(nodeFTlx,nodeFTly);
+                        path1.lineTo(nodeCTLx,nodeCTLy);
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+                    }
+                    //E-D
+                    if(((sourcex >=500 && sourcex<=690)&&(sourcey >=520 && sourcey<=800))&&((destx>=170 && destx<=360)&&(desty>=320&&desty<=800))) {
+                        path1.moveTo(nodeEblx, nodeEbly);
+                        path1.lineTo(nodeDbrx, nodeDbry);
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+                    }
+                    //E-F
+                    if(((sourcex >=500 && sourcex<=690)&&(sourcey >=520 && sourcey<=800))&&((destx>=830 && destx<=1020)&&(desty>=520&&desty<=800))) {
+                        path1.moveTo(nodeEtrx, nodeEtry);
+                        path1.lineTo(nodeFTlx, nodeFTly);
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+                    }
+                    //E-G
+                    if(((sourcex >=500 && sourcex<=690)&&(sourcey >=520 && sourcey<=800))&&((destx>=300 && destx<=480)&&(desty>=950&&desty<=1150))) {
+                        path1.moveTo(nodeEtlx, nodeEtly);
+                        path1.lineTo(nodeGTrx,nodeGTry);
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+                    }
+                    //E-H
+                    if(((sourcex >=500 && sourcex<=690)&&(sourcey >=520 && sourcey<=800))&&((destx>=630 && destx<=810)&&(desty>=950&&desty<=1150))) {
+                        path1.moveTo(nodeEtrx, nodeEtry);
+                        path1.lineTo(nodeHMidtx, nodeHMidty);
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+                    }
+                    //E-I
+                    if(((sourcex >=500 && sourcex<=690)&&(sourcey >=520 && sourcey<=800))&&((destx>=830 && destx<=1020)&&(desty>=950&&desty<=1150))) {
+                        path1.moveTo(nodeEtrx, nodeEtry);
+                        path1.lineTo(nodeHMidtx, nodeHMidty);
+                        path1.lineTo(nodeITrx, nodeITry);
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+                    }
+                    //E-J
+                    if(((sourcex >=500 && sourcex<=690)&&(sourcey >=520 && sourcey<=800))&&((destx>=170 && destx<=450)&&(desty>=1300&&desty<=1500))) {
+                        path1.moveTo(nodeEtlx, nodeEtly);
+                        path1.lineTo(nodeGTrx,nodeGTry);
+                        path1.lineTo(nodeGTlx, nodeGTly);
+                        path1.lineTo(nodeJMidtx, nodeJMidty);
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+                    }
+                    //E-K
+                    if(((sourcex >=500 && sourcex<=690)&&(sourcey >=520 && sourcey<=800))&&((destx>=830 && destx<=1020)&&(desty>=1300&&desty<=1500))) {
+                        path1.moveTo(nodeEtrx, nodeEtry);
+                        path1.lineTo(nodeHMidtx,nodeHMidty);
+                        path1.lineTo(nodeHTlx,nodeHTly);
+                        path1.lineTo(nodeHBlx,nodeHBly);
+                        path1.lineTo(nodeIBrx,nodeIBry);
+                        path1.lineTo(nodeKTrx,nodeKTry);
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+                    }
+                    //F-A
+                    if(((sourcex >=830 && sourcex<=1020)&&(sourcey >=520 && sourcey<=800))&&((destx>=170 && destx<=360)&&(desty>=30&&desty<=300))) {
+                        path1.moveTo(nodeFTlx, nodeFTly);
+                        path1.lineTo(nodeAStairTopX,nodeAStairTopY);
+                        path1.lineTo(nodeDtrx, nodeDtry);
+                        path1.lineTo(nodeAx, nodeAy);
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+                    }
+                    //F-B
+                    if(((sourcex >=830 && sourcex<=1020)&&(sourcey >=520 && sourcey<=800))&&((destx>=500 && destx<=690)&&(desty>=30&&desty<=300))) {
+                        path1.moveTo(nodeFTlx, nodeFTly);
+                        path1.lineTo(nodeCTLx,nodeCTLy);
+                        path1.lineTo(nodeBTRx, nodeBTRy);
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+                    }
+                    //F-C
+                    if(((sourcex >=830 && sourcex<=1020)&&(sourcey >=520 && sourcey<=800))&&((destx>=830 && destx<=1020)&&(desty>=30&&desty<=300))) {
+                        path1.moveTo(nodeFTlx, nodeFTly);
+                        path1.lineTo(nodeCTLx,nodeCTLy);
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+                    }
+                    //F-D
+                    if(((sourcex >=830 && sourcex<=1020)&&(sourcey >=520 && sourcey<=800))&&((destx>=170 && destx<=360)&&(desty>=320&&desty<=800))) {
+                        path1.moveTo(nodeFTlx, nodeFTly);
+                        path1.lineTo(nodeAStairTopX,nodeAStairTopY);
+                        path1.lineTo(nodeDtrx, nodeDtry);
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+                    }
+                    //F-E
+                    if(((sourcex >=830 && sourcex<=1020)&&(sourcey >=520 && sourcey<=800))&&((destx>=500 && destx<=690)&&(desty>=520&&desty<=800))) {
+                        path1.moveTo(nodeFTlx, nodeFTly);
+                        path1.lineTo(nodeEtrx, nodeEtry);
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+                    }
+                    //F-G
+                    if(((sourcex >=830 && sourcex<=1020)&&(sourcey >=520 && sourcey<=800))&&((destx>=300 && destx<=480)&&(desty>=950&&desty<=1150))) {
+                        path1.moveTo(nodeFblx, nodeFbly);
+                        path1.lineTo(nodeHTRx, nodeHTRy);
+                        path1.lineTo(nodeGTrx,nodeGTry);
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+                    }
+                    //F-H
+                    if(((sourcex >=830 && sourcex<=1020)&&(sourcey >=520 && sourcey<=800))&&((destx>=630 && destx<=810)&&(desty>=950&&desty<=1150))) {
+                        path1.moveTo(nodeFTlx,nodeFTly);
+                        path1.lineTo(nodeHTRx,nodeHTRy);
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+                    }
+                    //F-I
+                    if(((sourcex >=830 && sourcex<=1020)&&(sourcey >=520 && sourcey<=800))&&((destx>=830 && destx<=1020)&&(desty>=950&&desty<=1150))) {
+                        path1.moveTo(nodeFblx, nodeFbly);
+                        path1.lineTo(nodeITlx, nodeITly);
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+                    }
+                    //F-J
+                    if(((sourcex >=830 && sourcex<=1020)&&(sourcey >=520 && sourcey<=800))&&((destx>=170 && destx<=450)&&(desty>=1300&&desty<=1500))) {
+                        path1.moveTo(nodeFTlx,nodeFTly);
+                        path1.lineTo(nodeHTRx,nodeHTRy);
+                        path1.lineTo(nodeGTlx, nodeGTly);
+                        path1.lineTo(nodeJMidtx, nodeJMidty);
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+                    }
+                    //F-K
+                    if(((sourcex >=830 && sourcex<=1020)&&(sourcey >=520 && sourcey<=800))&&((destx>=830 && destx<=1020)&&(desty>=1300&&desty<=1500))) {
+                        path1.moveTo(nodeFTlx,nodeFTly);
+                        path1.lineTo(nodeHTRx,nodeHTRy);
+                        path1.lineTo(nodeHTlx, nodeHTly);
+                        path1.lineTo(nodeHBlx, nodeHBly);
+                        path1.lineTo(nodeIBrx, nodeIBry);
+                        path1.lineTo(nodeKTrx, nodeKTry);
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+                    }
+
+                    //G-A
+                    if(((sourcex >=300 && sourcex<=480)&&(sourcey >=950 && sourcey<=1150))&&((destx>=170 && destx<=360)&&(desty>=30&&desty<=300))) {
+
+                        path1.moveTo(nodeGTMidtX, nodeGTMidty);
+                        path1.lineTo(nodeAx, nodeAy);
+
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+
+
+                    }
+                    //G-B
+                    if(((sourcex >=300 && sourcex<=480)&&(sourcey >=950 && sourcey<=1150))&&((destx>=500 && destx<=690)&&(desty>=30&&desty<=300))) {
+
+                        path1.moveTo(nodeGTrx, nodeGTry);
+                        path1.lineTo(nodeBTLx, nodeBTLy);
+
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+
+
+                    }
+                    //G-C
+                    if(((sourcex >=300 && sourcex<=480)&&(sourcey >=950 && sourcey<=1150))&&((destx>=830 && destx<=1020)&&(desty>=30&&desty<=300))) {
+
+                        path1.moveTo(nodeGTrx, nodeGTry);
+                        path1.lineTo(nodeBBLx, nodeBBLy);
+                        path1.lineTo(nodeCBLx, nodeCBLy);
+                        path1.lineTo(nodeCTLx, nodeCTLy);
+
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+
+
+                    }
+                    //G-D
+                    if(((sourcex >=300 && sourcex<=480)&&(sourcey >=950 && sourcey<=1150))&&((destx>=170 && destx<=360)&&(desty>=320&&desty<=800))) {
+                        path1.moveTo(nodeGTMidtX, nodeGTMidty);
+                        path1.lineTo(nodeDtrx, nodeDtry);
+
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+
+
+
+
+                    }
+                    //G-E
+                    if(((sourcex >=300 && sourcex<=480)&&(sourcey >=950 && sourcey<=1150))&&((destx>=500 && destx<=690)&&(desty>=520&&desty<=800))) {
+
+                        path1.moveTo(nodeGTrx, nodeGTry);
+                        path1.lineTo(nodeEblx, nodeEbly);
+
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+
+
+                    }
+                    //G-F
+                    if(((sourcex >=300 && sourcex<=480)&&(sourcey >=950 && sourcey<=1150))&&((destx>=830 && destx<=1020)&&(desty>=520&&desty<=800))) {
+                        path1.moveTo(nodeGTMidtX, nodeGTMidty);
+                        path1.lineTo(nodeITlx, nodeITly);
+                        path1.lineTo(nodeFblx, nodeFbly);
+
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+
+
+
+
+                    }
+                    //G-H
+                    if(((sourcex >=300 && sourcex<=480)&&(sourcey >=950 && sourcey<=1150))&&((destx>=630 && destx<=810)&&(desty>=950&&desty<=1150))) {
+                        path1.moveTo(nodeGTrx, nodeGTry);
+
+                        path1.lineTo(nodeHTlx, nodeHTly);
+
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+
+
+                    }
+                    //G-I
+                    if(((sourcex >=300 && sourcex<=480)&&(sourcey >=950 && sourcey<=1150))&&((destx>=830 && destx<=1020)&&(desty>=950&&desty<=1150))) {
+
+                        path1.moveTo(nodeGTMidtX, nodeGTMidty);
+
+                        path1.lineTo(nodeITrx, nodeITry);
+
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+
+                    }
+                    //G-J
+                    if(((sourcex >=300 && sourcex<=480)&&(sourcey >=950 && sourcey<=1150))&&((destx>=170 && destx<=450)&&(desty>=1300&&desty<=1500))) {
+                        path1.moveTo(nodeGblx, nodeGbly);
+                        path1.lineTo(nodeJMidtx, nodeJMidty);
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+
+
+                    }
+                    //G-K
+                    if(((sourcex >=300 && sourcex<=480)&&(sourcey >=950 && sourcey<=1150))&&((destx>=830 && destx<=1020)&&(desty>=1300&&desty<=1500))) {
+
+                        path1.moveTo(nodeGTMidtX, nodeGTMidty);
+
+                        path1.lineTo(nodeHTlx, nodeHTly);
+                        path1.lineTo(nodeHBlx, nodeHBly);
+                        path1.lineTo(nodeIBlx, nodeIBly);
+                        path1.lineTo(nodeKTlx, nodeKTly);
+
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+
+
+                    }
+
+
+
+                    //h-A
+                    if(((sourcex >=630 && sourcex<=810)&&(sourcey >=950 && sourcey<=1150))&&((destx>=170 && destx<=360)&&(desty>=30&&desty<=300))) {
+
+                        path1.moveTo(nodeHTlx, nodeHTly);
+
+                        path1.lineTo(nodeGTMidtX, nodeGTMidty);
+                        path1.lineTo(nodeAx, nodeAy);
+
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+
+
+
+                    }
+
+
+                    //h-B
+                    if(((sourcex >=630 && sourcex<=810)&&(sourcey >=950 && sourcey<=1150))&&((destx>=500 && destx<=690)&&(desty>=30&&desty<=300))) {
+
+                        path1.moveTo(nodeHTRx, nodeHTRy);
+
+                        path1.lineTo(nodeCTLx, nodeCTLy);
+                        path1.lineTo(nodeBTRx, nodeBTRy);
+
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+
+
+                    }
+                    //H-C
+                    if(((sourcex >=630 && sourcex<=810)&&(sourcey >=950 && sourcey<=1150))&&((destx>=830 && destx<=1020)&&(desty>=30&&desty<=300))) {
+                        path1.moveTo(nodeHTRx, nodeGTry);
+
+                        path1.lineTo(nodeCTLx, nodeCTLy);
+
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+
+
+                    }
+                    //H-D
+                    if(((sourcex >=630 && sourcex<=810)&&(sourcey >=950 && sourcey<=1150))&&((destx>=170 && destx<=360)&&(desty>=320&&desty<=800))) {
+                        path1.moveTo(nodeHTlx, nodeHTly);
+
+                        path1.lineTo(nodeGTMidtX, nodeGTMidty);
+                        path1.lineTo(nodeDtrx, nodeDtry);
+
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+
+
+                    }
+                    //H-E
+                    if(((sourcex >=630 && sourcex<=810)&&(sourcey >=950 && sourcey<=1150))&&((destx>=500 && destx<=690)&&(desty>=520&&desty<=800))) {
+                        path1.moveTo(nodeHMidtx, nodeHMidty);
+
+                        path1.lineTo(nodeEtrx, nodeEtry);
+
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+
+
+                    }
+                    //H-F
+                    if(((sourcex >=630 && sourcex<=810)&&(sourcey >=950 && sourcey<=1150))&&((destx>=830 && destx<=1020)&&(desty>=520&&desty<=800))) {
+                        path1.moveTo(nodeHTRx, nodeHTRy);
+
+                        path1.lineTo(nodeFblx, nodeFbly);
+
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+
+
+                    }
+                    //H-G
+                    if(((sourcex >=630 && sourcex<=810)&&(sourcey >=950 && sourcey<=1150))&&((destx>=300 && destx<=480)&&(desty>=950&&desty<=1150))) {
+
+                        path1.moveTo(nodeHTlx, nodeHTly);
+
+                        path1.lineTo(nodeGTrx, nodeGTry);
+
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+
+
+
+                    }
+                    //H-I
+                    if(((sourcex >=630 && sourcex<=810)&&(sourcey >=950 && sourcey<=1150))&&((destx>=830 && destx<=1020)&&(desty>=950&&desty<=1150))) {
+
+                        path1.moveTo(nodeHTRx, nodeHTRy);
+
+                        path1.lineTo(nodeITrx, nodeITry);
+
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+
+
+                    }
+                    //H-J
+                    if(((sourcex >=630 && sourcex<=810)&&(sourcey >=950 && sourcey<=1150))&&((destx>=170 && destx<=450)&&(desty>=1300&&desty<=1500))) {
+                        path1.moveTo(nodeHBlx, nodeHBly);
+                        path1.lineTo(nodeGblx, nodeGbly);
+                        path1.lineTo(nodeJMidtx, nodeJMidty);
+
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+
+
+                    }
+                    //H-K
+                    if(((sourcex >=630 && sourcex<=810)&&(sourcey >=950 && sourcey<=1150))&&((destx>=830 && destx<=1020)&&(desty>=1300&&desty<=1500))) {
+                        path1.moveTo(nodeHBrx, nodeHBry);
+                        path1.lineTo(nodeIBrx,nodeIBry);
+                        path1.lineTo(nodeKTrx, nodeKTry);
+
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+
+
+                    }
+
+                    //I-A
+                    if(((sourcex >=830 && sourcex<=1020)&&(sourcey >=950 && sourcey<=1150))&&((destx>=170 && destx<=360)&&(desty>=30&&desty<=300))) {
+
+                        path1.moveTo(nodeITlx, nodeITly);
+
+                        path1.lineTo(nodeGTMidtX, nodeGTMidty);
+                        path1.lineTo(nodeAx, nodeAy);
+
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+
+
+                    }
+
+                    //I-B
+                    if(((sourcex >=830 && sourcex<=1020)&&(sourcey >=950 && sourcey<=1150))&&((destx>=500 && destx<=690)&&(desty>=30&&desty<=300))) {
+
+                        path1.moveTo(nodeITlx, nodeITly);
+
+                        path1.lineTo(nodeHTRx, nodeHTRy);
+                        path1.lineTo(nodeCTLx, nodeCTLy);
+                        path1.lineTo(nodeBTRx,nodeBTRy);
+
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+
+                    }
+                    //I-C
+                    if(((sourcex >=830 && sourcex<=1020)&&(sourcey >=950 && sourcey<=1150))&&((destx>=830 && destx<=1020)&&(desty>=30&&desty<=300))) {
+
+                        path1.moveTo(nodeITlx, nodeITly);
+
+                        path1.lineTo(nodeHTRx, nodeHTRy);
+                        path1.lineTo(nodeCTLx, nodeCTLy);
+
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+                    }
+                    //I-D
+                    if(((sourcex >=830 && sourcex<=1020)&&(sourcey >=950 && sourcey<=1150))&&((destx>=170 && destx<=360)&&(desty>=320&&desty<=800))) {
+
+                        path1.moveTo(nodeITlx, nodeITly);
+
+                        path1.lineTo(nodeGTMidtX, nodeGTMidty);
+                        path1.lineTo(nodeDtrx, nodeDtry);
+
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+
+
+                    }
+                    //I-E
+                    if(((sourcex >=830 && sourcex<=1020)&&(sourcey >=950 && sourcey<=1150))&&((destx>=500 && destx<=690)&&(desty>=520&&desty<=800))) {
+
+                        path1.moveTo(nodeITlx, nodeITly);
+
+                        path1.lineTo(nodeHTlx, nodeHTly);
+                        path1.lineTo(nodeEblx, nodeEbly);
+
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+
+                    }
+                    //I-F
+                    if(((sourcex >=830 && sourcex<=1020)&&(sourcey >=950 && sourcey<=1150))&&((destx>=830 && destx<=1020)&&(desty>=520&&desty<=800))) {
+                        path1.moveTo(nodeITlx, nodeITly);
+
+                        path1.lineTo(nodeFblx, nodeFbly);
+
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+
+
+                    }
+                    //I-G
+                    if(((sourcex >=830 && sourcex<=1020)&&(sourcey >=950 && sourcey<=1150))&&((destx>=300 && destx<=480)&&(desty>=950&&desty<=1150))) {
+                        path1.moveTo(nodeITrx, nodeITry);
+
+                        path1.lineTo(nodeGTMidtX, nodeGTMidty);
+
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+
+
+
+                    }
+                    //I-H
+                    if(((sourcex >=830 && sourcex<=1020)&&(sourcey >=950 && sourcey<=1150))&&((destx>=630 && destx<=810)&&(desty>=950&&desty<=1150))) {
+
+                        path1.moveTo(nodeITrx, nodeITry);
+
+                        path1.lineTo(nodeHTRx, nodeHTRy);
+
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+
+
+                    }
+                    //I-J
+                    if(((sourcex >=830 && sourcex<=1020)&&(sourcey >=950 && sourcey<=1150))&&((destx>=170 && destx<=450)&&(desty>=1300&&desty<=1500))) {
+                        path1.moveTo(nodeIBlx, nodeIBly);
+
+                        path1.lineTo(nodeGBrx, nodeGBry);
+                        path1.lineTo(nodeJtrx, nodeJtry);
+
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+
+
+
+                    }
+                    //I-K
+                    if(((sourcex >=830 && sourcex<=1020)&&(sourcey >=950 && sourcey<=1150))&&((destx>=830 && destx<=1020)&&(desty>=1300&&desty<=1500))) {
+
+                        path1.moveTo(nodeIBrx, nodeIBry);
+
+                        path1.lineTo(nodeKTrx, nodeKTry);
+
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+
+
+                    }
+
+                    //J-A
+                    if(((sourcex >=170 && sourcex<=450)&&(sourcey >=1300 && sourcey<=1500))&&((destx>=170 && destx<=360)&&(desty>=30&&desty<=300))) {
+
+                        path1.moveTo(nodeJMidtx, nodeJMidty);
+                        path1.lineTo(nodeGTlx, nodeGTly);
+                        path1.lineTo(nodeGTMidtX, nodeGTMidty);
+                        path1.lineTo(nodeAx, nodeAy);
+
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+
+
+                    }
+                    //J-B
+                    if(((sourcex >=170 && sourcex<=450)&&(sourcey >=1300 && sourcey<=1500))&&((destx>=500 && destx<=690)&&(desty>=30&&desty<=300))) {
+
+                        path1.moveTo(nodeJMidtx, nodeJMidty);
+                        path1.lineTo(nodeGTlx, nodeGTly);
+                        path1.lineTo(nodeGTMidtX, nodeGTMidty);
+                        path1.lineTo(nodeAx, nodeAy);
+                        path1.lineTo(nodeBTLx, nodeBTLy);
+
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+
+
+
+                    }
+                    //J-C
+                    if(((sourcex >=170 && sourcex<=450)&&(sourcey >=1300 && sourcey<=1500))&&((destx>=830 && destx<=1020)&&(desty>=30&&desty<=300))) {
+
+                        path1.moveTo(nodeJtrx, nodeJtry);
+                        path1.lineTo(nodeGblx, nodeGBry);
+                        path1.lineTo(nodeHBlx, nodeHBly);
+                        path1.lineTo(nodeHTlx,nodeHTly);
+                        path1.lineTo(nodeHTRx,nodeHTRy);
+                        path1.lineTo(nodeCTLx, nodeCTLy);
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+                    }
+                    //J-D
+                    if(((sourcex >=170 && sourcex<=450)&&(sourcey >=1300 && sourcey<=1500))&&((destx>=170 && destx<=360)&&(desty>=320&&desty<=800))) {
+
+                        path1.moveTo(nodeJMidtx, nodeJMidty);
+
+                        path1.lineTo(nodeGTlx, nodeGTly);
+                        path1.lineTo(nodeGTMidtX,nodeGTMidY);
+
+                        path1.lineTo(nodeDtrx, nodeDtry);
+
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+
+                    }
+                    //J-E
+                    if(((sourcex >=170 && sourcex<=450)&&(sourcey >=1300 && sourcey<=1500))&&((destx>=500 && destx<=690)&&(desty>=520&&desty<=800))) {
+
+
+                        path1.moveTo(nodeJMidtx, nodeJMidty);
+
+                        path1.lineTo(nodeGTlx, nodeGTly);
+                        path1.lineTo(nodeGTrx, nodeGTry);
+                        path1.lineTo(nodeEtlx, nodeEtly);
+
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+
+                    }
+                    //J-F
+                    if(((sourcex >=170 && sourcex<=450)&&(sourcey >=1300 && sourcey<=1500))&&((destx>=830 && destx<=1020)&&(desty>=520&&desty<=800))) {
+                        path1.moveTo(nodeJtrx, nodeJtry);
+                        path1.lineTo(nodeBStairTopX, nodeBStairTopY);
+                        path1.lineTo(nodeHTlx, nodeHTly);
+                        path1.lineTo(nodeHTRx,nodeHTRy);
+                        path1.lineTo(nodeFTlx, nodeFTly);
+
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+
+
+                    }
+                    //J-G
+                    if(((sourcex >=170 && sourcex<=450)&&(sourcey >=1300 && sourcey<=1500))&&((destx>=300 && destx<=480)&&(desty>=950&&desty<=1150))) {
+
+                        path1.moveTo(nodeJMidtx, nodeJMidty);
+
+                        path1.lineTo(nodeGTlx, nodeGTly);
+
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+
+
+                    }
+                    //J-H
+                    if(((sourcex >=170 && sourcex<=450)&&(sourcey >=1300 && sourcey<=1500))&&((destx>=630 && destx<=810)&&(desty>=950&&desty<=1150))) {
+                        path1.moveTo(nodeJtrx, nodeJtry);
+                        path1.lineTo(nodeBStairTopX,nodeBStairTopY);
+                        path1.lineTo(nodeHTlx, nodeHTly);
+
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+
+
+
+                    }
+                    //J-I
+                    if(((sourcex >=170 && sourcex<=450)&&(sourcey >=1300 && sourcey<=1500))&&((destx>=830 && destx<=1020)&&(desty>=950&&desty<=1150))) {
+                        path1.moveTo(nodeJtrx, nodeJtry);
+                        path1.lineTo(nodeBStairTopX,nodeBStairTopY);
+                        path1.lineTo(nodeHTlx, nodeHTly);
+                        path1.lineTo(nodeITrx, nodeITry);
+
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+
+
+                    }
+                    //J-K
+                    if(((sourcex >=170 && sourcex<=450)&&(sourcey >=1300 && sourcey<=1500))&&((destx>=830 && destx<=1020)&&(desty>=1300&&desty<=1500))) {
+                        path1.moveTo(nodeJtrx, nodeJtry);
+
+                        path1.lineTo(nodeKTrx, nodeKTry);
+
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+
+
+                    }
+
+                    //K-A
+                    if(((sourcex >=830 && sourcex<=1020)&&(sourcey >=1300 && sourcey<=1500))&&((destx>=170 && destx<=360)&&(desty>=30&&desty<=300))) {
+
+                        path1.moveTo(nodeKTlx,nodeKy);
+                        path1.lineTo(nodeBStairTopX, nodeBStairTopY);
+                        path1.lineTo(nodeHTlx,nodeHy);
+                        path1.lineTo(nodeGTMidtX, nodeGTMidY);
+                        path1.lineTo(nodeDbrx, nodeDy);
+                        path1.lineTo(nodeAx,nodeAy);
+
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+
+
+                    }
+                    //K-B
+                    if(((sourcex >=830 && sourcex<=1020)&&(sourcey >=1300 && sourcey<=1500))&&((destx>=500 && destx<=690)&&(desty>=30&&desty<=300))) {
+
+                        path1.moveTo(nodeKTlx,nodeKy);
+                        path1.lineTo(nodeBStairTopX, nodeBStairTopY);
+                        path1.lineTo(nodeHTlx,nodeHy);
+                        path1.lineTo(nodeGTrx, nodeGTry);
+                        path1.lineTo(nodeBTLx, nodeBTLy);
+
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+
+
+                    }
+                    //K-C
+                    if(((sourcex >=830 && sourcex<=1020)&&(sourcey >=1300 && sourcey<=1500))&&((destx>=830 && destx<=1020)&&(desty>=30&&desty<=300))) {
+
+                        path1.moveTo(nodeKTlx,nodeKy);
+                        path1.lineTo(nodeBStairTopX, nodeBStairTopY);
+                        path1.lineTo(nodeHTlx,nodeHy);
+
+                        path1.lineTo(nodeHTRx,nodeHTRy);
+                        path1.lineTo(nodeCTLx, nodeCTLy);
+
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+
+
+                    }
+                    //K-D
+                    if(((sourcex >=830 && sourcex<=1020)&&(sourcey >=1300 && sourcey<=1500))&&((destx>=170 && destx<=360)&&(desty>=320&&desty<=800))) {
+
+                        path1.moveTo(nodeKTlx,nodeKy);
+                        path1.lineTo(nodeBStairTopX, nodeBStairTopY);
+                        path1.lineTo(nodeHTlx,nodeHy);
+                        path1.lineTo(nodeGTMidtX, nodeGTMidY);
+                        path1.lineTo(nodeDbrx, nodeDy);
+
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+
+                    }
+
+                    //K-E
+                    if(((sourcex >=830 && sourcex<=1020)&&(sourcey >=1300 && sourcey<=1500))&&((destx>=500 && destx<=690)&&(desty>=520&&desty<=800))) {
+
+
+                        path1.moveTo(nodeKTlx,nodeKy);
+                        path1.lineTo(nodeBStairTopX, nodeBStairTopY);
+                        path1.lineTo(nodeHTlx,nodeHy);
+                        path1.lineTo(nodeGTrx, nodeGTry);
+                        path1.lineTo(nodeEtlx, nodeEtly);
+
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+
+
+                    }
+                    //K-F
+                    if(((sourcex >=830 && sourcex<=1020)&&(sourcey >=1300 && sourcey<=1500))&&((destx>=830 && destx<=1020)&&(desty>=520&&desty<=800))) {
+                        path1.moveTo(nodeKTlx,nodeKy);
+                        path1.lineTo(nodeBStairTopX, nodeBStairTopY);
+                        path1.lineTo(nodeHTlx,nodeHy);
+
+                        path1.lineTo(nodeHTRx,nodeHTRy);
+                        path1.lineTo(nodeFTlx, nodeFTly);
+
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+
+
+                    }
+                    //K-G
+                    if(((sourcex >=830 && sourcex<=1020)&&(sourcey >=1300 && sourcey<=1500))&&((destx>=300 && destx<=480)&&(desty>=950&&desty<=1150))) {
+                        path1.moveTo(nodeKTlx,nodeKy);
+                        path1.lineTo(nodeBStairTopX, nodeBStairTopY);
+                        path1.lineTo(nodeHTlx,nodeHy);
+                        path1.lineTo(nodeGTMidtX, nodeGTMidY);
+
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+
+                    }
+                    //K-H
+                    if(((sourcex >=830 && sourcex<=1020)&&(sourcey >=1300 && sourcey<=1500))&&((destx>=630 && destx<=800)&&(desty>=950&&desty<=1150))) {
+
+                        path1.moveTo(nodeKTlx,nodeKy);
+                        path1.lineTo(nodeBStairTopX, nodeBStairTopY);
+                        path1.lineTo(nodeHTlx,nodeHy);
+
+                        path1.lineTo(nodeHTRx,nodeHTRy);
+
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+
+
+                    }
+                    //K-I
+                    if(((sourcex >=830 && sourcex<=1020)&&(sourcey >=1300 && sourcey<=1500))&&((destx>=830 && destx<=1020)&&(desty>=950&&desty<=1150))) {
+
+                        path1.moveTo(nodeKTrx,nodeKTry);
+                        path1.lineTo(nodeIBrx, nodeIBry);
+
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+
+
+
+
+                    }
+                    //K-J
+                    if(((sourcex >=830 && sourcex<=1020)&&(sourcey >=1300 && sourcey<=1500))&&((destx>=170 && destx<=450)&&(desty>=1300&&desty<=1500))) {
+
+                        path1.moveTo(nodeKTlx,nodeKy);
+                        path1.lineTo(nodeJtrx, nodeJtry);
+
+                        pathMeasure = new PathMeasure(path1, false);
+                        pathLength = pathMeasure.getLength();
+
+                    }
+
+
+
+
+
 
                     counter = 0;
 
